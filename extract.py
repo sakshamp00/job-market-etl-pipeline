@@ -13,7 +13,7 @@ url = "https://jsearch.p.rapidapi.com/search"
 params = {
     "query":"developer jobs",
     "page":"1",
-    "num_pages":"2",
+    "num_pages":"4",
     "date_posted":"week"
 }
 
