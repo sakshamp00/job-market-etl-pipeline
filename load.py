@@ -17,14 +17,15 @@ c.execute("""CREATE TABLE IF NOT EXISTS jobs (
     PRIMARY KEY (job_title, employer_name, job_city))""")
 
 conn.commit()
+def load_jobs():
+    clean_files = glob("cleanData/jobs_clean_*.csv")
+    latest_file = sorted(clean_files)[-1]
+    df = pd.read_csv(latest_file)
 
-
-clean_files = glob("cleanData/jobs_clean_*.csv")
-latest_file = sorted(clean_files)[-1]
-df = pd.read_csv(latest_file)
-
-for _, row in df.iterrows():
-    c.executemany("""INSERT OR IGNORE INTO jobs (...) VALUES (?, ?, ..., ?)""", df.values.tolist())
-conn.commit()
-
+    for _, row in df.iterrows():
+        c.executemany("""INSERT OR IGNORE INTO jobs (...) VALUES (?, ?, ..., ?)""", df.values.tolist())
+    conn.commit()
+    print(f"Loaded data from {latest_file} into the database.")
+    
 conn.close()
+load_jobs()
