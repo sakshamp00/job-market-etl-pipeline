@@ -12,7 +12,7 @@ params = {
 }
 
 headers = {
-	"x-rapidapi-key": "a43127d046msh87bc11228f29cd7p11c67djsn2c55a62d6397",
+	"x-rapidapi-key": "key",
 	"x-rapidapi-host": "jsearch.p.rapidapi.com"
 }
 
