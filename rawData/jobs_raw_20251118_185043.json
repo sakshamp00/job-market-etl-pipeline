@@ -1,0 +1,13 @@
+{
+    "status": "OK",
+    "request_id": "7db544cc-463b-44a9-bcc8-b1d562a8d7ac",
+    "parameters": {
+        "query": "developer jobs in melbourne",
+        "page": 1,
+        "num_pages": 2,
+        "date_posted": "week",
+        "country": "aus",
+        "language": "en"
+    },
+    "data": []
+}
