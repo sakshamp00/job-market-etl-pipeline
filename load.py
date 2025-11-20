@@ -30,6 +30,4 @@ def load_jobs():
                         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""", df.values.tolist())
     conn.commit()
     print(f"Loaded data from {latest_file} into the database.")
-
-load_jobs()
 conn.close()

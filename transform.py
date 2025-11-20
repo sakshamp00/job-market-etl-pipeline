@@ -25,4 +25,3 @@ def transform_jobs():
     df.drop_duplicates(subset=["job_title", "employer_name", "job_city"])
     df.to_csv(clean_filename, index=False)
     print(f"Saved clean data → {clean_filename}")
-transform_jobs()

@@ -11,8 +11,9 @@ API_KEY = os.getenv("API_KEY")
 url = "https://jsearch.p.rapidapi.com/search"
 
 params = {
-    "query":"developer jobs",
+    "query":"software developer",
     "page":"1",
+    "country": "australia",
     "num_pages":"4",
     "date_posted":"week"
 }
@@ -21,7 +22,6 @@ headers = {
 	"x-rapidapi-key": API_KEY,
 	"x-rapidapi-host": "jsearch.p.rapidapi.com"
 }
-
 
 def extract_jobs():
     os.makedirs('rawData', exist_ok=True)
@@ -40,5 +40,3 @@ def extract_jobs():
     with open(raw_filename, 'w') as f:
         json.dump(data, f, indent=4)
     print(f"Saved raw data → {raw_filename}")
-
-extract_jobs()
