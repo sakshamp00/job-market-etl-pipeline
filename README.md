@@ -29,7 +29,7 @@ This project demonstrates core data engineering concepts such as API ingestion, 
 1. Clone the repo:
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/sakshamp00/job-market-etl-pipeline.git
    cd etl-pipeline
    ```
 
