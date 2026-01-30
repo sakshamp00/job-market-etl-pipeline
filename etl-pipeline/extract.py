@@ -14,7 +14,7 @@ params = {
     "query":"software developer",
     "page":"1",
     "country": "australia",
-    "num_pages":"4",
+    "num_pages":"2",
     "date_posted":"week"
 }
 
@@ -40,3 +40,4 @@ def extract_jobs():
     with open(raw_filename, 'w') as f:
         json.dump(data, f, indent=4)
     print(f"Saved raw data → {raw_filename}")
+    return raw_filename
