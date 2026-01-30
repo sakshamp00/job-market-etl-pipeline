@@ -56,10 +56,9 @@ This project demonstrates core data engineering concepts such as API ingestion, 
 
 # 🛠️ Usage
 
-Run the main ETL pipeline:
+Run the main ETL pipeline from the project root:
 
-    python main.py
-    
+    python -m job_market_etl_pipeline.main
 
 You’ll see the console output at each stage of the ETL process:
 - Extraction of the raw job data via the API key
@@ -70,8 +69,9 @@ You’ll see the console output at each stage of the ETL process:
 
 # 📁 Project Structure
 
-```job-market-etl-pipeline/    # main package folder
+```job-market-etl-pipeline/    # Main package folder
 ├── etl-pipeline/              # Python module
+│   ├── __init__.py            # Marks this folder as a Python package
 │   ├── extract.py             # Extraction of data 
 │   ├── transform.py           # Transformation of data
 │   ├── load.py                # Loading data into SQLite datbase
